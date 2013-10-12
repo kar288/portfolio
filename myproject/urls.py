@@ -27,4 +27,4 @@ urlpatterns = patterns('',
     url(r'^grumbls_json.html$', 'grumblr.views.grumbls_json', name="grumbls_json"), 
     
 
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+)
