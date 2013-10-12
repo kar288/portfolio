@@ -17,8 +17,21 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'seasideresortnfregular';
+    src: url('../fonts/SEASRN__-webfont.eot');
+    src: url('../fonts/SEASRN__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SEASRN__-webfont.woff') format('woff'),
+         url('../fonts/SEASRN__-webfont.ttf') format('truetype'),
+         url('../fonts/SEASRN__-webfont.svg#seasideresortnfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .big-letter{
-	font-family: fff_tusjbold;
+	font-family: seasideresortnfregular;
 	font-size: 200;
 	text-align: center;
 	border: none;
