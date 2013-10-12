@@ -62,8 +62,7 @@ def registration(request):
 	login(request, new_user)
 
 
-	context['email'] = form.cleaned_data['email']
-	return render(request, 'profile.html', context)
+	return profile(request)
 
 def needs_confirmation(request):
 	return render(request)
