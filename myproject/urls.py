@@ -7,10 +7,9 @@ from django.conf.urls.static import static
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-        url(r'^$', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
     url(r'^login', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
     url(r'^sign-in.html', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
-    
+    url(r'^grumblr$', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),    
     url(r'^profile$', 'grumblr.views.profile', name='profile'),
     url(r'^registration$', 'grumblr.views.registration', name='registration'),
     url(r'^lost-password.html$', 'grumblr.views.lostpassword'),
@@ -29,7 +28,7 @@ urlpatterns = patterns('',
     url(r'^confirm-registration/(?P<username>[a-zA-Z0-9_@\+\-]+)/(?P<token>[a-z0-9\-]+)$', 'grumblr.views.confirm_registration', name='confirm'),
     url(r'^needs-confirmation.html$', 'grumblr.views.needs_confirmation'), 
     url(r'^grumbls_json.html$', 'grumblr.views.grumbls_json', name="grumbls_json"), 
-    url(r'^home$', 'carmela.views.home', name='home'),
+    url(r'^$', 'carmela.views.home', name='home'),
     url(r'^image/(?P<name>\w+)$', 'carmela.views.get_photo', name='image'),
     url(r'^resume$', 'carmela.views.resume', name='resume'),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
