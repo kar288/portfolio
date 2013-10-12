@@ -20,10 +20,10 @@
 		<input type="hidden" name="next" value="{{next}}" />
 		<div>
 			<div>
-				<a href="#"> Forgot your password? </a>
+				<a href="{% url 'recover-password'%}"> Forgot your password? </a>
 			</div>
 			<div>
-				<a href="#"> New to Grumblr? Register now! </a>
+				<a href="{% url 'registration'%}"> New to Grumblr? Register now! </a>
 			</div>
 		</div>
 	</form>

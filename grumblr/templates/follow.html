@@ -1,0 +1,28 @@
+{% if followees %}
+<h4>Following</h4>
+<div class="row">
+	{% for followee in followees %}
+	<div class="col-sm-6 col-md-3">
+		<a href="{%url 'profile'%}/{{followee.username}}" class="thumbnail">
+			<div class="ratio" title="{{followee.username}}" style="background-image:url('{% url 'photo' followee.id %}')">
+			</div>
+		</a>
+	</div>
+	{% endfor %}
+</div> <!-- following -->
+{% endif %}
+{% if followers %}
+<h4>Followers</h4>
+<div class="row">
+	{% for follower in followers %}
+		{% if not follower in current_user.blockers.all%}
+		<div class="col-sm-6 col-md-3">
+			<a href="{%url 'profile'%}/{{follower.username}}" class="thumbnail">
+				<div class="ratio" title="{{follower.username}}" style="background-image:url('{% url 'photo' follower.id %}')">
+				</div>
+			</a>
+		</div>
+		{% endif %}
+	{% endfor %}
+</div> <!-- followers -->
+{%endif%}
