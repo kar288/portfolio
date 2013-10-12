@@ -21,8 +21,13 @@ body {
 	font-family: fff_tusjbold;
 	font-size: 200;
 	text-align: center;
+	border: none;
 }
 
 .big-letter:hover{
 	text-decoration: none;
+}
+
+.links {
+	padding: 100px;
 }
