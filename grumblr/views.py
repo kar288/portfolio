@@ -61,8 +61,7 @@ def registration(request):
 	new_user = authenticate(username=new_user.username, password=form.cleaned_data['password1'])
 	login(request, new_user)
 
-
-	return profile(request)
+	return redirect(reverse('profile'))
 
 def needs_confirmation(request):
 	return render(request)
