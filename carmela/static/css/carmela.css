@@ -22,3 +22,7 @@ body {
 	font-size: 200;
 	text-align: center;
 }
+
+.big-letter:hover{
+	text-decoration: none;
+}
