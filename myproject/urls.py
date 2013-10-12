@@ -14,5 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'grumblr.views.home', name='home'),
+    url(r'^$', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
+    url(r'^login', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
+    url(r'^sign-in.html', 'django.contrib.auth.views.login', {'template_name':'sign-in.html'}, name='login'),
 )

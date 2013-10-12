@@ -1,0 +1,30 @@
+{% extends "base-out.html" %}
+
+{% block title %}Grumblr{% endblock %}
+
+{% block content %}
+
+	{% if form.errors %}
+		<div class="errors">
+			{% for error in form.errors.values %}
+				{{error}}
+			{% endfor %}
+		</div>
+	{% endif %}
+	<form class="form-signin" action="{% url 'login'%}" method="POST">
+		<h2> Sign in </h2>
+		<input name="username" type="text" class="form-control" placeholder="Username" autofocus>
+		<input name="password" type="password" class="form-control" placeholder="Password">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+		{% csrf_token %}
+		<input type="hidden" name="next" value="{{next}}" />
+		<div>
+			<div>
+				<a href="#"> Forgot your password? </a>
+			</div>
+			<div>
+				<a href="#"> New to Grumblr? Register now! </a>
+			</div>
+		</div>
+	</form>
+{% endblock %}
