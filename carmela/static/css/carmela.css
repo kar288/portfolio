@@ -1,11 +1,20 @@
 body {
-  padding-top: 50px;
+    background: rgba(255, 237, 144, 0.25);
 }
 
 .title > h1 {
 	text-align: center;
+    letter-spacing: 10px;
+    font-size: 80px;
+    color: #341139;
 }
 
+.content {
+    margin-bottom: 0px;
+    margin-top: 160;
+    margin-left: 160px;
+    margin-right: 160px;
+}
 @font-face {
     font-family: 'fff_tusjbold';
     src: url('../fonts/FFF_Tusj-webfont.eot');
@@ -32,15 +41,45 @@ body {
 
 .big-letter{
 	font-family: seasideresortnfregular;
-	font-size: 200;
-	text-align: center;
-	border: none;
+	font-size: 200px;
+    padding-top: 10%
 }
 
-.big-letter:hover{
+.normal-text{
+    padding-top:45%;
+    font-size: 20px;
+    color: #359668;
+}
+
+.inside:hover{
 	text-decoration: none;
+    color: #359668;
 }
 
 .links {
-	padding: 100px;
+	margin: 0px;
+}
+
+.circle {
+    position: relative;
+    padding: 20px;
+}
+
+.dummy {
+    padding-top: 100%;
+}
+
+.inside {
+    color: #3C3251;
+    text-align: center;
+    border: 10px solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; 
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(168, 212, 111, 0.25);
 }
