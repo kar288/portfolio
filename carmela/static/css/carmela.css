@@ -41,7 +41,8 @@ body {
 
 .big-letter{
 	font-family: seasideresortnfregular;
-	font-size: 200px;
+	font-size: 1300%;
+    padding-top: 10%;
 }
 
 .normal-text{
