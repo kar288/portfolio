@@ -17,15 +17,8 @@ $(document).ready(function(){
             $(this).text(val)
         })
     })
-    // alert($('.circle'))
-    // $('.circle').each(function () {
-    //     $(this).hover(function () {
-    //         console.log('in')
-    //     }, function () {
-    //         console.log('out')
-    //     });
-    //     console.log('eachs')
-    // }
+    var size = $('.big-letter').width()
+    $('.big-letter').css('fontSize': 2*size/3)
 });
 
 
