@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    var size = 2*$('.big-letter').width()/3
+    console.log(size)
+    $('.big-letter').css({'fontSize': size})
     $('.inside').each(function() {
         var val = $(this).text().trim()
         $(this).hover(function(){
@@ -12,13 +15,13 @@ $(document).ready(function(){
                 $(this).text("Grumblr")
             }
             $(this).toggleClass('normal-text big-letter')
+            $('.normal-text').css({'fontSize': size/10})
         }, function () {
             $(this).toggleClass('big-letter normal-text')
             $(this).text(val)
+            $('.big-letter').css({'fontSize': size})
         })
     })
-    var size = $('.big-letter').width()
-    $('.big-letter').css('fontSize': 2*size/3)
 });
 
 
